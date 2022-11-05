@@ -2,6 +2,9 @@
   "name": "mybuy",
   "version": "1.0.0",
   "description": "mybuy is a ecommerce website",
+  "engines":{
+    "node": "18.x"
+  },
   "main": "server.js",
   "type": "module",
   "scripts": {
