@@ -6,10 +6,10 @@ import { savePaymentMethod } from '../redux/actions/cartActions';
 
 const PaymentPage = ({ history, initialValues, onSubmit }) => {
   const cart = useSelector(state => state.cart);
-  const { shippingAddress } = cart;
+  const { shippingsAddress } = cart;
 
-  if (!shippingAddress) {
-    history.push('/shipping');
+  if (!shippingsAddress) {
+    history.push('/shippings');
   }
 
   const [paymentMethod, setPaymentMethod] = useState('paymoney');

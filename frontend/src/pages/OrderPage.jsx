@@ -76,7 +76,7 @@ const OrderPage = ({ match, history }) => {
         <Col md={8}>
           <ListGroup>
             <ListGroup.Item>
-              <h2>Shipping</h2>
+              <h2>shippings</h2>
               <p>
                 <strong>Name: </strong> {order.user.name}
               </p>
@@ -86,9 +86,9 @@ const OrderPage = ({ match, history }) => {
               </p>
               <p>
                 <strong>Address:</strong>
-                {order.shippingAddress.address}, {order.shippingAddress.city}{' '}
-                {order.shippingAddress.postalCode},{' '}
-                {order.shippingAddress.country}
+                {order.shippingsAddress.address}, {order.shippingsAddress.city}{' '}
+                {order.shippingsAddress.postalCode},{' '}
+                {order.shippingsAddress.country}
               </p>
               {order.isDelivered ? (
                 <Message variant="success">
@@ -179,8 +179,8 @@ const OrderPage = ({ match, history }) => {
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Shipping</Col>
-                  <Col>{order.shippingPrice} credits</Col>
+                  <Col>shippings</Col>
+                  <Col>{order.shippingsPrice} credits</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>

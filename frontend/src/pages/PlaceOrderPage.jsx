@@ -18,11 +18,11 @@ const PlaceOrderPage = ({ history }) => {
   cart.itemsPrice = addDecimals(
     cart.cartItems.reduce((acc, item) => acc + item.price * item.qty, 0)
   );
-  cart.shippingPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 100);
+  cart.shippingsPrice = addDecimals(cart.itemsPrice > 100 ? 0 : 100);
   cart.taxPrice = addDecimals(Number((0.15 * cart.itemsPrice).toFixed(2)));
   cart.totalPrice = (
     Number(cart.itemsPrice) +
-    Number(cart.shippingPrice) +
+    Number(cart.shippingsPrice) +
     Number(cart.taxPrice)
   ).toFixed(2);
 
@@ -40,10 +40,10 @@ const PlaceOrderPage = ({ history }) => {
     dispatch(
       createOrder({
         orderItems: cart.cartItems,
-        shippingAddress: cart.shippingAddress,
+        shippingsAddress: cart.shippingsAddress,
         paymentMethod: cart.paymentMethod,
         itemsPrice: cart.itemsPrice,
-        shippingPrice: cart.shippingPrice,
+        shippingsPrice: cart.shippingsPrice,
         taxPrice: cart.taxPrice,
         totalPrice: cart.totalPrice,
       })
@@ -57,12 +57,12 @@ const PlaceOrderPage = ({ history }) => {
         <Col md={8}>
           <ListGroup>
             <ListGroup.Item>
-              <h2>Shipping</h2>
+              <h2>shippings</h2>
               <p>
                 <strong>Address:</strong>
-                {cart.shippingAddress.address}, {cart.shippingAddress.city}{' '}
-                {cart.shippingAddress.postalCode},{' '}
-                {cart.shippingAddress.country}
+                {cart.shippingsAddress.address}, {cart.shippingsAddress.city}{' '}
+                {cart.shippingsAddress.postalCode},{' '}
+                {cart.shippingsAddress.country}
               </p>
             </ListGroup.Item>
 
@@ -121,8 +121,8 @@ const PlaceOrderPage = ({ history }) => {
               </ListGroup.Item>
               <ListGroup.Item>
                 <Row>
-                  <Col>Shipping</Col>
-                  <Col>{cart.shippingPrice} credits</Col>
+                  <Col>shippings</Col>
+                  <Col>{cart.shippingsPrice} credits</Col>
                 </Row>
               </ListGroup.Item>
               <ListGroup.Item>

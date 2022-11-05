@@ -29,12 +29,12 @@ Array [
     >
       <a
         className="nav-link"
-        data-rb-event-key="/shipping"
-        href="/shipping"
+        data-rb-event-key="/shippings"
+        href="/shippings"
         onClick={[Function]}
         onKeyDown={[Function]}
       >
-        Shipping
+        shippings
       </a>
     </div>
     <div
@@ -86,7 +86,7 @@ Array [
           onClick={[Function]}
         >
           <h2>
-            Shipping
+            shippings
           </h2>
           <p>
             <strong>
@@ -183,7 +183,7 @@ Array [
               <div
                 className="col"
               >
-                Shipping
+                shippings
               </div>
               <div
                 className="col"

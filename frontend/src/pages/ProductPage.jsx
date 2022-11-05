@@ -19,7 +19,7 @@ import {
 } from '../redux/actions/productActions';
 import { PRODUCT_CREATE_REVIEW_RESET } from '../redux/constants/productConstants';
 
-const ProductPage = ({ history, match }) => {
+const productspage = ({ history, match }) => {
   const [qty, setQty] = useState(1);
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState('');
@@ -230,4 +230,4 @@ const ProductPage = ({ history, match }) => {
   );
 };
 
-export default ProductPage;
+export default productspage;

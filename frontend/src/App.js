@@ -3,12 +3,12 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
 import Header from './components/Header';
 import HomePage from './pages/HomePage';
-import ProductPage from './pages/ProductPage';
+import productspage from './pages/productspage';
 import CartPage from './pages/CartPage';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import ProfilePage from './pages/ProfilePage';
-import ShippingPage from './pages/ShippingPage';
+import shippingsPage from './pages/shippingsPage';
 import PaymentPage from './pages/PaymentPage';
 import PlaceOrderPage from './pages/PlaceOrderPage';
 import OrderPage from './pages/OrderPage';
@@ -27,14 +27,14 @@ const App = () => {
         <Header />
         <main className="py-3">
           <Container fluid>
-            <Route path="/shipping" component={ShippingPage} exact />
+            <Route path="/shippings" component={shippingsPage} exact />
             <Route path="/payment" component={PaymentPage} exact />
             <Route path="/placeorder" component={PlaceOrderPage} exact />
             <Route path="/order/:id" component={OrderPage} exact />
             <Route path="/login" component={LoginPage} exact />
             <Route path="/register" component={RegisterPage} exact />
             <Route path="/profile" component={ProfilePage} exact />
-            <Route path="/product/:id" component={ProductPage} exact />
+            <Route path="/product/:id" component={productspage} exact />
             <Route path="/cart/:id?" component={CartPage} exact />
             <Route path="/admin/userlist" component={UserListPage} exact />
             <Route path="/admin/user/:id/edit" component={UserEditPage} exact />

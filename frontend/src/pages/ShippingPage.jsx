@@ -2,22 +2,22 @@ import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import CheckoutBar from '../components/CheckoutBar';
-import { saveShippingAddress } from '../redux/actions/cartActions';
+import { saveshippingsAddress } from '../redux/actions/cartActions';
 
-const ShippingPage = ({ history }) => {
+const shippingsPage = ({ history }) => {
   const cart = useSelector(state => state.cart);
-  const { shippingAddress } = cart;
+  const { shippingsAddress } = cart;
 
-  const [address, setAddress] = useState(shippingAddress.address);
-  const [city, setCity] = useState(shippingAddress.city);
-  const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
-  const [country, setCountry] = useState(shippingAddress.country);
+  const [address, setAddress] = useState(shippingsAddress.address);
+  const [city, setCity] = useState(shippingsAddress.city);
+  const [postalCode, setPostalCode] = useState(shippingsAddress.postalCode);
+  const [country, setCountry] = useState(shippingsAddress.country);
 
   const dispatch = useDispatch();
 
   const submitHandler = e => {
     e.preventDefault();
-    dispatch(saveShippingAddress({ address, city, postalCode, country }));
+    dispatch(saveshippingsAddress({ address, city, postalCode, country }));
     history.push('/payment');
   };
 
@@ -25,7 +25,7 @@ const ShippingPage = ({ history }) => {
     <>
       <CheckoutBar step1 step2 />
       <div className="justify-content-center align-items-center container bg-light p-3">
-        <h1 className="pl-3">Shipping</h1>
+        <h1 className="pl-3">shippings</h1>
         <Form onSubmit={submitHandler} className="pr-3 pl-3">
           <Form.Group>
             <Form.Label>Address</Form.Label>
@@ -80,4 +80,4 @@ const ShippingPage = ({ history }) => {
   );
 };
 
-export default ShippingPage;
+export default shippingsPage;
