@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`productspage Component should match the snapshot 1`] = `
+exports[`ProductPage Component should match the snapshot 1`] = `
 Array [
   <a
     className="btn btn-danger my-3"

@@ -21,7 +21,7 @@ const products = [
     category: 'toys',
     price: 115,
     countInStock: 55,
-    rating: 5,
+    rating: 0,
     numReviews: 0,
   },
   {

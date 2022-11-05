@@ -3,20 +3,20 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 
-import shippingsPage from '../shippingsPage';
+import ShippingPage from '../ShippingPage';
 import store from '../../redux/store';
 
-describe('shippingsPage Component', () => {
-  const MockshippingsPage = (
+describe('ShippingPage Component', () => {
+  const MockShippingPage = (
     <MemoryRouter>
       <Provider store={store}>
-        <shippingsPage />
+        <ShippingPage />
       </Provider>
     </MemoryRouter>
   );
 
   it('should match the snapshot', () => {
-    const tree = renderer.create(MockshippingsPage).toJSON();
+    const tree = renderer.create(MockShippingPage).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

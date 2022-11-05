@@ -3,20 +3,20 @@ import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { MemoryRouter } from 'react-router-dom';
 
-import productspage from '../productspage';
+import ProductPage from '../ProductPage';
 import store from '../../redux/store';
 
-describe('productspage Component', () => {
-  const Mockproductspage = (
+describe('ProductPage Component', () => {
+  const MockProductPage = (
     <MemoryRouter>
       <Provider store={store}>
-        <productspage match={{ params: { id: 1 } }} />
+        <ProductPage match={{ params: { id: 1 } }} />
       </Provider>
     </MemoryRouter>
   );
 
   it('should match the snapshot', () => {
-    const tree = renderer.create(Mockproductspage).toJSON();
+    const tree = renderer.create(MockProductPage).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

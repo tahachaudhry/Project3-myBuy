@@ -29,11 +29,11 @@ export default class OrderService {
   add = async (
     orderItems,
     user,
-    shippingsAddress,
+    shippingAddress,
     paymentMethod,
     itemsPrice,
     taxPrice,
-    shippingsPrice,
+    shippingPrice,
     totalPrice
   ) => {
     if (orderItems && orderItems.length === 0) {
@@ -42,11 +42,11 @@ export default class OrderService {
       const addedOrder = new Order({
         orderItems,
         user,
-        shippingsAddress,
+        shippingAddress,
         paymentMethod,
         itemsPrice,
         taxPrice,
-        shippingsPrice,
+        shippingPrice,
         totalPrice,
       });
 

@@ -9,11 +9,11 @@ export default class OrderController {
     const createdOrder = await this.orderService.add(
       req.body.orderItems,
       req.user._id,
-      req.body.shippingsAddress,
+      req.body.shippingAddress,
       req.body.paymentMethod,
       req.body.itemsPrice,
       req.body.taxPrice,
-      req.body.shippingsPrice,
+      req.body.shippingPrice,
       req.body.totalPrice
     );
 

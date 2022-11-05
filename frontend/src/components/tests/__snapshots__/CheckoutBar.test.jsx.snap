@@ -39,7 +39,7 @@ exports[`should render correctly 1`] = `
       role="button"
       tabIndex={-1}
     >
-      shippings
+      Shipping
     </a>
   </div>
   <div
